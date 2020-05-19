@@ -1,0 +1,32 @@
+<div class="register">
+    <h3>Welkom {{newUser.name}}!</h3>
+    <p>We hebben een paar gegevens van je nodig om je voordering zo goed mogelijk bij te kunnen houden!<br><i>Deze gegevens kun je later altijd nog aanpassen.</i></p>
+    
+    <form [formGroup]="registerForm" ngNativeValidate (ngSubmit)="onSubmit(registerForm.value)">
+        <div *ngIf="newUser.name == null" class="form-group">
+            <label for="name">Naam</label>
+            <input id="name" type="text" formControlName="name" class="form-control" required/>
+        </div>
+        <label>Geslacht</label>
+        <div class="form-group row">
+            <label class="col-md-6 gender">
+                <input type="radio" value="male" formControlName="gender"/>
+                <span>Man</span>
+            </label>
+            <label class="col-md-6 gender">
+                <input type="radio" value="female" formControlName="gender" />
+                <span>Vrouw</span>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="length">Lengte <span class="small">cm*</span></label>
+            <input id="length" type="number" formControlName="length" class="form-control" (keyup)="determineBMI($event)" required/>
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight <span class="small">kg*</span></label>
+            <input id="weight" type="number" formControlName="weight" class="form-control" (keyup)="determineBMI($event)" required/>
+        </div>
+        <p>Uw BMI: <span id="bmi">{{bmi | number}}</span></p>
+        <input class="btn btn-success" type="submit" value="Inloggen"/>
+    </form>
+</div>

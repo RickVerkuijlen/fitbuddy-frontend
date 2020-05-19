@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-4 col-sm-12" >
+        <div class="shadow" id="user-header">
+            <span class="box-header">Profiel</span>
+            <div class="row">
+                <img src="{{User.picture}}" onerror="this.src='assets/images/default.png'" />
+                <span id="name">{{User.name}}</span>
+            </div>
+            <button class="btn" (click)="logOut()">Uitloggen</button>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12">
+        <div class="shadow">
+            <span class="box-header">Beoefende sporten</span>
+            <ul class="sports-list">
+                <li *ngFor="let sport of sports">
+                    {{sport.name}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-5 col-sm-12">
+        <div class="shadow" id="user-content">
+            <span class="box-header">Lichaam</span>
+            Gewicht: {{userProfile.weight}} kg<br>
+            Lengte: {{userProfile.length}} cm<br>
+            BMI: {{userProfile.bmi}}
+        </div>
+    </div>
+</div>
+

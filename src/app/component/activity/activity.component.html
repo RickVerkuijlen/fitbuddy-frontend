@@ -1,0 +1,26 @@
+<form [formGroup]="activityForm" (ngSubmit)="onSubmit(activityForm.value)">
+    <div class="floating-label no-float">
+        <input id="date" formControlName="date"  (change)="isToday($event.target.value)" onfocus="(this.type='date')" required/>
+        <label for="date">Kies de datum</label>
+    </div>
+    <div [hidden]="!dateChosen" class="animation">
+        <div class="floating-label no-float">
+            <select formControlName="sportId" id="sport" #s (change)="showKCal(s.value)" required >
+                <option *ngFor="let s of followedSports" [value]="s.id">{{s.name}}</option>    
+            </select>
+            <label for="sport">Welke sport?</label>
+        </div>
+        <div [hidden]="!isFitness">Maak een schema. (NOT IMPLEMENTED YET)</div>
+        <div [hidden]="!showLater">
+            <div class="floating-label no-float">
+                <input onfocus="(this.type='time')" id="time" formControlName="timeSported" required/>
+                <label for="time">Hoelang heb je gesport?</label>
+            </div>
+        </div>
+        <div [hidden]="showLater">
+            Later dan vandaag
+        </div>
+        <input type="submit" value="Verzenden">
+    </div>
+</form>
+

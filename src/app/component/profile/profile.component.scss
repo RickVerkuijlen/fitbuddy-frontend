@@ -1,0 +1,28 @@
+@import '../../../variables.scss';
+.shadow {
+    padding-top: 65px;
+}
+div#user-header {
+    span#name {
+        font-size: 20px;
+        margin-left: 15px;
+        .subtext {
+            color: grey;
+        }
+    }
+    img {
+        border-radius: round($number: 100%);
+        border: 3px solid $primary-color;
+        width: auto;
+        height: auto;
+        max-width: 150px;
+        vertical-align: middle;
+    }
+}
+
+
+ul.sports-list {
+    li {
+        text-transform: capitalize;
+    }
+}

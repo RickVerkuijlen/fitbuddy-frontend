@@ -1,0 +1,27 @@
+<div class="row">
+    <div *ngIf="!sports">
+        <div class="gooey">
+            <span class="dot"></span>
+            <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+        </div>
+    </div>
+    <div *ngFor="let sport in sports"></div>
+    <ng-template ngFor let-sport [ngForOf]="sports">
+        <div class="col-md-4 col-sm-6">
+            <div class="shadow">
+                <span class="box-header" style="text-transform: capitalize;" i18n>{{sport.name}}</span>
+                <img src="assets/images/sports/{{sport.name}}.png" class="sportimage"/>
+                <p>{{sport.description}}</p>
+
+                <b *ngIf="sport.kcalPerMinute != 0">Verbranding: {{sport.kcalPerMinute}} kcal per minuut</b>
+                <button *ngIf="doesUserFollowSport(sport)" class="btn btn-primary" (click)="followSport(sport.id)">Volgen</button>
+                <button *ngIf="!doesUserFollowSport(sport)" class="btn btn-danger" (click)="unfollowSport(sport.id)">Ontvolgen</button>
+            </div>
+        </div>
+    </ng-template>
+</div>
+

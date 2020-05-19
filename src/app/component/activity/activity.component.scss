@@ -1,0 +1,58 @@
+@import '../../../variables.scss';
+
+form {
+    width: 30%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 20px 0 rgba(0,0,0,.3);
+    -moz-box-shadow: 0 3px 20px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 3px 20px 0 rgba(0,0,0,.3);
+    -o-box-shadow: 0 3px 20px 0 rgba(0,0,0,.3);
+    -ms-box-shadow: 0 3px 20px 0 rgba(0,0,0,.3);
+    div.floating-label {
+        position: relative;
+        margin-bottom: 25px;
+        label {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transition: .5s;
+            padding-left: 5px;
+            margin-bottom: 0;
+            color: grey;
+            &:not(.no-float), &:not {
+                position: absolute;
+                margin-top: -16px;
+                color: grey;
+            }
+        }
+        input, select {
+            border: none;
+            border-bottom: 2px solid $primary-color;
+            padding: 5px;
+            width: 50%;
+            &:focus, &:valid {
+                outline: none;
+                border-bottom: 2px solid $secondary-color;
+                & + label {
+                    bottom: 100%;
+                    margin-top: -16px;
+                    font-size: 14px;
+                    color: black;
+                }
+            }
+            &:valid {
+                border-bottom-color: green;
+            }
+        }
+    }
+}
+select, option {
+    text-transform: capitalize;
+}

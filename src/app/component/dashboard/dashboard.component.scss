@@ -1,0 +1,67 @@
+@import '../../../variables.scss';
+
+div#dashboard {
+    .new {
+        height: 75px;
+        width: 75px;
+        font-size: 50px;
+        border-radius: 100%;
+        border: none;
+        background-color: $secondary-color;
+        color: white;
+        position: fixed;
+        bottom: 75px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 9999;
+    }
+}
+
+div.shadow{
+    margin-bottom: 20px;
+    span.title-left {
+        float: left;
+        background-color: $primary-color;
+        color: white;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        text-align: center;
+        width: 80px;
+        .day {
+            display: block;
+            font-size: 30px;
+        }
+        .month {
+            display: block;
+            font-size: 100%;
+            text-transform: uppercase;
+        }
+        .year {
+        }
+    }
+    div.content {
+        margin-left: 70px;
+        p {
+            &#sportName {
+                text-transform: capitalize;
+            }
+            fa-icon {
+                font-size: 25px;
+                width: 20%;
+                display: inline-block;
+                text-align: center;
+                &#kCal {
+                    color: #af0202;  
+                }
+                &#timeSported {
+                    color: #4e4e4e;
+                }
+            }
+        }
+    }
+}
+

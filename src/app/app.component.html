@@ -1,0 +1,7 @@
+<div *ngIf="!User">
+    <firebase-ui (signInSuccessWithAuthResult)="successCallback($event)"></firebase-ui>
+</div>
+<div *ngIf="User">
+    <router-outlet></router-outlet>
+    <app-menu></app-menu>
+</div>
