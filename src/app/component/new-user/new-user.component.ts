@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormsModule } from '@angular/forms'
+import { FormBuilder, Validators } from '@angular/forms'
 import { User } from 'src/app/model/user';
 import { EventEmitter } from 'protractor';
 import { Gender } from '../../helpers/gender';

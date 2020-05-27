@@ -21,7 +21,6 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { SportsComponent } from './component/sports/sports.component';
 import { ActivityComponent } from './component/activity/activity.component';
 import localeNL from '@angular/common/locales/nl';
-import { SortByPipe } from './helpers/sort-by.pipe';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 registerLocaleData(localeNL);
@@ -60,8 +59,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     ProfileComponent,
     DashboardComponent,
     SportsComponent,
-    ActivityComponent,
-    SortByPipe
+    ActivityComponent
   ],
   imports: [
     BrowserModule,
