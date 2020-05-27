@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/RickVerkuijlen/fitbuddy-frontend.svg?style=svg&circle-token=b84cbeb347eb3d7d0df9143f193c75a11ac4df6b)](<LINK>)
+
+
 # FitbuddyFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
